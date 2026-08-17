@@ -13,4 +13,4 @@ async def stop_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def speed_control(update: Update, context: ContextTypes.DEFAULT_TYPE):
     cmd = update.message.text.split()[0].replace('/', '')
     await update.message.reply_text(f"⚡ Quiz speed updated to: {cmd}")
-  
+    
