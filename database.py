@@ -1,7 +1,12 @@
 import sqlite3
 
+DB_NAME = "quiz_bot.db"
+
+def get_connection():
+    return sqlite3.connect(DB_NAME)
+
 def init_db():
-    conn = sqlite3.connect("quiz_bot.db")
+    conn = get_connection()
     cursor = conn.cursor()
     
     # Users Table
@@ -36,4 +41,4 @@ def init_db():
 
 if __name__ == "__main__":
     init_db()
-  
+    
