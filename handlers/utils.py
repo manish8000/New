@@ -9,4 +9,4 @@ async def txt_import(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def html_report(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("💼 Generating HTML score card report...")
-  
+    
