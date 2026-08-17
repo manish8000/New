@@ -1,6 +1,6 @@
+import sqlite3
 from telegram import Update
 from telegram.ext import ContextTypes
-import sqlite3
 from config import OWNER_ID
 
 async def broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -46,4 +46,4 @@ async def users_list(update: Update, context: ContextTypes.DEFAULT_TYPE):
     count = cursor.fetchone()[0]
     conn.close()
     await update.message.reply_text(f"👥 Total Registered Users: {count}")
-  
+    
